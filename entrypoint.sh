@@ -37,7 +37,7 @@ if [ -z "${INDICES_TO_DELETE}" ]; then
 else
   echo "Delete some indices…"
   set -x
-  curl -X DELETE "${ELASTIC_INSTANCE}/${INDICES_TO_DELETE}"
+  curl -sL -X DELETE "${ELASTIC_INSTANCE}/${INDICES_TO_DELETE}"
 fi
 
 exit 0
